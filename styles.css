@@ -1,0 +1,41 @@
+body {
+  font-family: Franklin Gothic;
+  letter-spacing: 0.5px;
+  overflow: hidden;
+  background-color: black;
+  background-image: url(https://shots.codepen.io/gesteves/pen/YBPpwG-800.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.wrapper {
+  width: 410px;
+  margin: 0 auto;
+  text-align: justify;
+  display: block;
+  font-size: 2em;
+  scale: 50%;
+  animation: 40s linear slide;
+  animation-iteration-count: infinite;
+  background: linear-gradient(rgb(0, 0, 0) 20%, rgb(251, 203, 29) 30%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 400% 400%;
+}
+
+@keyframes slide {
+  0% {
+    transform: perspective(3em) translateZ(2em) rotateX(10deg) translateY(600px);
+    background-position: 0% 100%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
+
+  100% {
+    transform: perspective(3em) translateZ(2em) rotateX(10deg) translateY(-1000px);
+    background-position: 0% 0%;
+  }
+}
